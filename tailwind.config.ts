@@ -13,8 +13,23 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+
+      colors: {
+        "butterscotch": "#E09647",
+      },
+
+      animation: {
+        "run": "run 30s linear infinite"
+      },
+
+      keyframes : {
+        "run": {
+            "0%":{left: "0", transform :"translate-x-0"},
+            "100%" : {left:"100%", transform : "-translate-x-full" }
+        }
+      }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 export default config
